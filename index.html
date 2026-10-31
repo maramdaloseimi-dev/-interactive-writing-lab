@@ -306,7 +306,7 @@ document.querySelectorAll('#dropgrid .drop').forEach(d=>{d.ondragover=e=>{e.prev
   function closeGate(){gate.classList.remove('is-open');gate.setAttribute('aria-hidden','true');pending=null;}
   badge.addEventListener('click',()=>openGate(null));
   const preview=document.createElement('button');
-  preview.type='button';preview.className='student-badge lab-preview-toggle';
+  preview.type='button';preview.className='student-badge lab-preview-toggle';preview.hidden=true;preview.style.display='none';
   preview.textContent='👁 معاينة المشرفة: تشغيل';
   preview.setAttribute('aria-pressed','false');
   bar.appendChild(preview);
